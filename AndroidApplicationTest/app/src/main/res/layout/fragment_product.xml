@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E6E6E6">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#A9A9A9"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/messageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Shop"
+            android:textSize="20dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <!-- <android.support.v7.widget.Toolbar
+         android:id="@+id/toolbar_bottom"
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+
+         android:background="#bbc0de"
+         android:layout_alignParentBottom="true"
+         android:minHeight="?attr/actionBarSize" />
+ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_top">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+
+            android:scrollbars="vertical" />
+        >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No data found"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+</RelativeLayout>
